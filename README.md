@@ -2,6 +2,12 @@
 
 An interactive role-playing game that simulates a ransomware attack incident response. Players take on one of several cybersecurity roles while AI agents handle the other positions, creating a realistic tabletop exercise environment.
 
+## 🎮 Play Now
+
+**Live Demo:** [https://yxk14.github.io/Tabletop_exercise/](https://yxk14.github.io/Tabletop_exercise/)
+
+*No installation required - play directly in your browser!*
+
 ## Features
 - **Role Selection**: Choose from 6 cybersecurity roles (CEO, CTO, CISO, IT Manager, HR, SOC Analyst)
 - **Realistic Scenario**: Simulated ransomware attack with detailed incident description
