@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabletop Exercise for responding to cyber incidents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tabletop Exercise for responding to cyber incidents</h1>
+        <div id="roleSelection" style="display: block;">
+            <label for="userRole">Select your role:</label>
+            <select id="userRole">
+                <option value="ceo">CEO</option>
+                <option value="cto">CTO</option>
+                <option value="ciso">CISO</option>
+                <option value="itManager">IT Manager</option>
+                <option value="hr">HR</option>
+                <option value="socAnalyst">SOC Analyst</option>
+            </select>
+            <button id="confirmRole">Confirm Role</button>
+        </div>
+        <button id="startButton" style="display: none;">Start Exercise</button>
+        <div id="masterClock" style="display: none;">Master Clock: 00:00</div>
+    </header>
+
+    <section id="scenario" style="display: none;">
+        <h2>Incident Scenario</h2>
+        <p>It's a Wednesday afternoon. Suddenly, the IT systems go black. No one can access emails, files, or any networked resources. Suspected ransomware attack.</p>
+    </section>
+
+    <aside id="timeline" style="display: none;">
+        <h2>Timeline</h2>
+        <div id="timelineContent"></div>
+    </aside>
+
+    <section id="roles" style="display: none;">
+        <h2>Participants</h2>
+        <div class="role" id="ceo">
+            <div class="icon">👑</div>
+            <h3>CEO - Sarah</h3>
+            <textarea id="ceoText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="ceo" style="display: none;">Submit</button>
+            <div class="output" id="ceoOutput"></div>
+        </div>
+        <div class="role" id="cto">
+            <div class="icon">🛠️</div>
+            <h3>CTO - David</h3>
+            <textarea id="ctoText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="cto" style="display: none;">Submit</button>
+            <div class="output" id="ctoOutput"></div>
+        </div>
+        <div class="role" id="ciso">
+            <div class="icon">🔒</div>
+            <h3>CISO - Elena</h3>
+            <textarea id="cisoText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="ciso" style="display: none;">Submit</button>
+            <div class="output" id="cisoOutput"></div>
+        </div>
+        <div class="role" id="itManager">
+            <div class="icon">💻</div>
+            <h3>IT Manager - Marcus</h3>
+            <textarea id="itManagerText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="itManager" style="display: none;">Submit</button>
+            <div class="output" id="itManagerOutput"></div>
+        </div>
+        <div class="role" id="hr">
+            <div class="icon">👥</div>
+            <h3>HR - Patricia</h3>
+            <textarea id="hrText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="hr" style="display: none;">Submit</button>
+            <div class="output" id="hrOutput"></div>
+        </div>
+        <div class="role" id="socAnalyst">
+            <div class="icon">🔍</div>
+            <h3>SOC Analyst - Alex</h3>
+            <textarea id="socAnalystText" placeholder="Enter your statement..." style="display: none;"></textarea>
+            <button class="submitBtn" data-role="socAnalyst" style="display: none;">Submit</button>
+            <div class="output" id="socAnalystOutput"></div>
+        </div>
+    </section>
+
+    <div id="controlPanel" style="display: none; margin: 10px 0;">
+        <button id="downloadLog">Download Log</button>
+        <button id="finishGame">Finish Game</button>
+    </div>
+
+    <section id="hints" style="display: none;">
+        <h2>Hints</h2>
+        <div id="hintBox"></div>
+    </section>
+
+    <audio id="backgroundMusic" loop preload="auto">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="finishSound" preload="auto">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="typingSound" preload="auto">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
